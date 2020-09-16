@@ -1,5 +1,11 @@
 # TDD training 
 
+## TDD Rules
+
+1. You shall not write production code other than to pass a failing test
+1. You shall not write more of production code other than necessary to that failing test.
+1. You shall not write more of the test than to make it fail for the right reason.
+
 ## Exercises
 
 ### Fizz Buzz
