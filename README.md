@@ -10,7 +10,7 @@
 
 ### Fizz Buzz
 
-Write a program that prints the numbers from 1 to 100, but for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+Write a method that receives an integer and returns the number as a string, but for multiples of three return "Fizz" instead of the number and for the multiples of five return "Buzz". For numbers which are multiples of both three and five return "FizzBuzz".
 
 ### Leap year
 
