@@ -15,3 +15,9 @@ Write a method that receives an integer and returns the number as a string, but 
 ### Leap year
 
 Write a function that returns true or false depending on whether its input integer is a leap year or not. A leap year is defined as one that is divisible by 4, but is not otherwise divisible by 100 unless it is also divisible by 400. For example, 2001 is a typical common year and 1996 is a typical leap year, whereas 1900 is an atypical common year and 2000 is an atypical leap year.
+
+### Nth - Fibonacci
+
+Write some code to generate the Fibonacci number for the nth position ex: 
+int Fibonacci(int position)
+First Fibonacci numbers in the sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
