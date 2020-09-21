@@ -24,6 +24,14 @@ First Fibonacci numbers in the sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 
 ## Exercises 2
 
+The clock game, considering you are starting with a green state (All tests are passing), you have 3 minutes to:
+1. Add functionality - Add test and make it pass
+2. Refactor
+
+If 3 minutes is passed and changes aren't commited into a green state:
+
+    git reset --hard
+
 ### String calculator
 
 1.	Create a simple String calculator with a method int Add(string numbers)
