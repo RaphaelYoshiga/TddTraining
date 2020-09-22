@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddTraining.UnitTests", "TddTraining.UnitTests\TddTraining.UnitTests.csproj", "{2870EC70-2C81-4652-BFFD-52DC20A3AD52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddTraining.UnitTests", "TddTraining.UnitTests\TddTraining.UnitTests.csproj", "{2870EC70-2C81-4652-BFFD-52DC20A3AD52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddTraining", "TddTraining\TddTraining.csproj", "{4975EC3B-7D0F-4C8C-ADC6-87DB47D3889F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddTraining", "TddTraining\TddTraining.csproj", "{4975EC3B-7D0F-4C8C-ADC6-87DB47D3889F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -22,7 +22,7 @@ Write some code to generate the Fibonacci number for the nth position ex:
 int Fibonacci(int position)
 First Fibonacci numbers in the sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 
-## Exercises 2
+    ## Exercises 2
 
 The clock game, considering you are starting with a green state (All tests are passing), you have 3 minutes to:
 1. Add functionality - Add test and make it pass
@@ -40,6 +40,62 @@ If 3 minutes is passed and changes aren't commited into a green state:
 4.	Allow the Add method to handle new lines between numbers (instead of commas).
 a.	the following input is ok:  “1\n2,3”  (will equal 6)
 b.	the following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
-5.	Support different delimiters
-1.	to change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ . The first line is optional. all existing scenarios should still be supported
-2.	Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message
+5.	Support different delimiters. To change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ . The first line is optional. all existing scenarios should still be supported
+6.	Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message
+
+## Exercises 3
+
+While doing TDD there is a separation between asserting Data and Asserting behavior.
+Data is when you accessing specific properties, variables or fields of the code.
+Behavior is accesssing/calling methods in other classes.
+
+Do not mix asserting data and behavior.
+
+**Class collaboration 1**
+Under TddTraining/Users/UserController, implement the method GetUserBy(int id).
+
+The user can be retrieved by using the interface "ILocalUserRetriever":
+
+**Class collaboration 2**
+Modify the GetUserBy(int id) in the UserController to retrieve the user from "IUserRetriever":
+
+IUserRetriever returns a:
+
+    public class ExternalServiceUser
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Postcode { get; set; }
+        public string InternalEmail { get; set; }
+    }
+
+But this is the response of GetUser
+
+    public class UserResponse
+    {
+        public int Id { get; set; }
+        public string  Name { get; set; }
+    }
+
+**Class collaboration 3**
+Implement the SaveUser in the userController.
+To save a user we need to call IUserPersister, that it receives a "ExternalServiceUser".
+
+    public class SaveUserRequest
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Postcode { get; set; }
+    }
+
+Validation rules:
+* Name should not be null or empty
+* Email should not be null or empty
+* Postcode not be null or empty
+
+In case the validation fails, we need to return 400 Bad Request.
+If the user is sent to the user service, we need to return 200 OK.
+
+**Class collaboration 4**
+IUserPersister sometimes might throw a TeaPotException, when this happens we want to return 418 I'm a teapot.
